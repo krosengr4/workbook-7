@@ -1,0 +1,21 @@
+---AGGREGATE FUNCTIONS---
+- COUNT() counts the number of occurrences of a value(or number of rows) in a specified column
+    - ex: SELECT COUNT(*)
+          from film;
+    - ex: SELECT COUNT(DISTINCT(rating))
+          FROM film;
+
+- SUM() adds up values in the specified function
+    - ex: SELECT SUM(length)
+          FROM film;
+
+- AVG() returns the average of a value from a specified column
+    - SELECT AVG(rental_rate)
+      FROM film
+      WHERE rating = "G";
+
+- MIN() or MAX() finds the min or max value
+    - ex: SELECT MIN(length)
+          FROM film;
+    - ex: SELECT MAX(length)
+          FROM film;
