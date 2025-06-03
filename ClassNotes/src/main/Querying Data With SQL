@@ -17,6 +17,15 @@
         - SELECT DISTINCT statement only returns unique values
         - ex: SELECT DISTINCT column1, column2...
         FROM table_name;
+        -
+        - Querying for null values
+        - You must use a specific test to match a column to NULL
+        - ex: WHERE column-name IS NULL
+              WHERE column-name IS NOT NULL
+        - ex: SELECT film_id, title
+              FROM film
+              WHERE original_language_id IS NULL;
+
 
 
 
