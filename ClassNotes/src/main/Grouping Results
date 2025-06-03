@@ -1,0 +1,34 @@
+---GROUPING RESULTS---
+
+- GROUP BY clause allows you to execute aggregate functions on groups of data
+    - ex: SELECT column1, column2, etc
+          FROM table_name
+          WHERE condition
+          GROUP BY column_name(s)
+          ORDER BY column_name(s);
+
+- Renaming Computed Fields
+    - Using AS you can create an alias for the column name
+        - ex: SELECT rental_id, SUM(amount) AS total_amount
+              FROM sakila.payment
+              GROUP BY rental_id
+              ORDER BY rental_id;
+    - You can also use AS to create an alias for a table name
+        - ex: SELECT rating, AVG(rental_rate) AS avg_rate
+              FROM film
+              GROUP BY rating
+              ORDER BY avg_rating;
+
+- HAVING is used with GROUP BY to include only those groups that meet a specified condition
+    - ex: SELECT column1, columns2, etc
+          FROM table_name
+          WHERE row-condition
+          GROUP BY column_name(s)
+          HAVING group-condition
+          ORDER BY column_name(s);
+    - If WHERE is used to select rows, HAVING is to select groups
+        - ex: SELECT rating, COUNT(*)
+              FROM film
+              GROUP BY rating
+              HAVING COUNT(*) >= 200
+              ORDER BY rating;
