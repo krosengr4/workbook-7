@@ -1,0 +1,25 @@
+- SELECT statement
+    - This is how you can look for specific data
+    - It needs a keyword, or keywords, (the list of columns to be displayed)
+        - (ex: "SELECT column 1, column 3) or (ex: "SELECT *) for all columns"
+    - It also needs a FROM (the table to get data from)
+        - ex: "FROM (keyword)
+
+- Optional clauses in a SELECT statement
+    - ORDER BY specifies which order to return the rows
+    - WHERE specifies which rows to return
+        - Uses comparison operators (=, >, <, <=...)
+        - Build complex condition using logical operators (AND, OR, NOT)
+        -
+        - The LIKE allows you to perform a custom string comparison
+        - ex: WHERE title LIKE sit%
+        -
+        - SELECT DISTINCT statement only returns unique values
+        - ex: SELECT DISTINCT column1, column2...
+        FROM table_name;
+
+
+
+    - AS to provide an alias for a column or expression
+    - GROUP BY groups rows based on specified characteristics, so an aggregate function can be applied to each group
+    - HAVING specifies which groups to include in the result
