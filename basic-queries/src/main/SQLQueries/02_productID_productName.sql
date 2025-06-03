@@ -23,26 +23,23 @@ where UnitsInStock >= 100
 order by UnitPrice desc;
 
 -- Problem 6
-SELECT distinct(UnitPrice), ProductName FROM products
-WHERE UnitsInStock >= 100
-ORDER BY UnitPrice desc;
-
 SELECT UnitPrice, ProductName FROM products
-where UnitsInStock >= 100
-ORDER BY UnitPrice;
+WHERE UnitsInStock >= 1 and UnitPrice = 10
+ORDER BY UnitPrice desc, ProductName asc;
 
 -- Problem 7
 SELECT UnitPrice, ProductName FROM products
-WHERE UnitsInStock IS NULL AND UnitsOnOrder >= 1
+WHERE UnitsInStock = 0 AND UnitsOnOrder >= 1
 ORDER BY ProductName;
 
 --  Problem 8
-SELECT * FROM categories;
 -- The table that holds the categories of products is called categories
 
 -- Problem 9
 SELECT * FROM categories;
 -- The seafood category is ID #8
+SELECT CategoryID from categories
+where CategoryName = 'Seafood';
 
 -- Problem 10
 SELECT * from products
@@ -52,7 +49,7 @@ WHERE CategoryID = 8;
 SELECT FirstName, LastName FROM employees;
 
 -- Problem 12
-SELECT FirstName, LastName FROM employees
+SELECT FirstName, LastName, Title FROM employees
 WHERE Title LIKE '%Manager%';
 
 -- Problem 13
