@@ -1,0 +1,22 @@
+---JOINING TABLES IN QUERIES---
+
+- INNER JOIN
+    - Where a row in one table is joined with a row in another table
+    - *Only matched rows will be included in the result
+    - ex: SELECT employee.id, first_name, last_name, description, min_val, max_val
+          FROM employee
+          JOIN pay_grade
+          ON employee.pay_grade_id = pay_grade.id;
+
+- OUTER JOIN
+    - Used when we might want rows in one table that don't match rows in the other table
+    - Do this by creating a LEFT OUTER JOIN or a RIGHT OUTER JOIN
+        - LEFT OUTER JOIN
+            - The FIRST table doesn't require matching data to be included
+        - RIGHT OUTER JOIN
+            - The SECOND table doesn't require matching data to be included
+
+        - ex: SELECT order.id, sold_date, name, email
+              FROM order
+              LEFT JOIN customer
+              ON order.customer_id = customer.id;
