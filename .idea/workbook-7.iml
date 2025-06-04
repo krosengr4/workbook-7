@@ -12,6 +12,9 @@
       <sourceFolder url="file://$MODULE_DIR$/aggregates-and-grouping/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/aggregates-and-grouping/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/aggregates-and-grouping/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/nested-queries/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nested-queries/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/nested-queries/src/test/java" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

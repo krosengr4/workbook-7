@@ -24,6 +24,11 @@ group by SupplierID;
 SELECT CategoryID, avg(UnitPrice) from products
 group by CategoryID;
 
+-- Problem 8
+SELECT SupplierID, count(SupplierID) from products
+group by SupplierID
+HAVING count(SupplierID) >= 5;
+
 -- Problem 9
 SELECT * from products;
 SELECT ProductID, ProductName, UnitPrice * UnitsInStock as InventoryValue from products
