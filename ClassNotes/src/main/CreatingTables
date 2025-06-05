@@ -27,3 +27,5 @@
               PercentOff float NOT NULL,
               PRIMARY KEY(AdId)
               );
+
+    - You can also have the primary key reference a key in another table
