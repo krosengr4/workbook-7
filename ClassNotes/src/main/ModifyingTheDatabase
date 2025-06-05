@@ -1,0 +1,33 @@
+-----MODIFYING THE DATABASE-----
+
+- INSERT INTO
+    - 1st possibility: you specify the table name and the values of the rows
+        - ex: INSERT INTO table-name (column1, column2, column3, ...)
+              VALUES (value1, value2, value3, ...);
+    - 2nd possibility: You specify the tables column names and the values of the rows
+        - ex: INSERT INTO table-name
+              VALUES (value1, value2, value3, ...);
+
+- UPDATE
+    - Allows you to change the value in one or more columns of a row
+    - use the WHERE clause to specify which row(s) will have the changes being made
+        - ex: UPDATE table-name
+              SET column1 = value1, column2 = value2, ...
+              WHERE condition;
+    - *** If you forget the WHERE clause, all of the records in that table will be updated!
+        - Safety setting: SET SQL_SAFE_UPDATES=0;
+        - Turn off the safety setting: SET SQL_SAFE_UPDATES=1;
+
+    - ex: (Change all PATTY first names to PATRICE)
+    - SET SQL_SAFE_UPDATES=0;
+      UPDATE customer
+      SET first_name = 'PATRICE'
+      WHERE first_name = 'PATTY';
+      SET SQL_SAFE_UPDATES=1;
+
+- DELETE
+    - Use the DELETE to delete one or more rows from a table
+    - Also uses the WHERE clause to specify which row(s) to delete
+        - ex: DELETE FROM table-name
+              WHERE condition;
+
