@@ -1,0 +1,29 @@
+-----CREATING A TABLE-----
+
+- CREATE TABLE
+    - used to create a table
+        - ex: CREATE TABLE table_name (
+              column1 datatype,
+              column2 datatype,
+              column3 datatype,
+              ....
+              );
+
+    - You can mark a field as a primary key using PRIMARY_KEY
+    - You can mark fields as not being nullable
+    - You can also mark fields as being an auto-incremented field (this must be an integer data type)
+        - ex: CREATE TABLE table_name (
+            column1 INT NOT NULL AUTO_INCREMENT,
+            column2 datatype,
+            column3 datatype NOT NULL,
+            ....
+            PRIMARY KEY (column1)
+            );
+
+        - ex: CREATE TABLE advertisements (
+              AdId int NOT NULL AUTO_INCREMENT,
+              Title varchar(50) NOT NULL,
+              MagicCode varchar(9),
+              PercentOff float NOT NULL,
+              PRIMARY KEY(AdId)
+              );
